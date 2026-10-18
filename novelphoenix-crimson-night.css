@@ -1,0 +1,206 @@
+
+/* NOVELPHOENIX — CRIMSON NIGHT */
+
+:root {
+    color-scheme: dark;
+
+    --page: #171112;
+    --surface: #211719;
+    --card: #291a1d;
+    --border: #593037;
+    --border-hover: #a44350;
+
+    /* Text hierarchy */
+    --name-color: #ff6b78;
+    --comment-color: #f0e6e2;
+    --muted-color: #b39b9e;
+
+    /* Reactions */
+    --like-color: #70e09a;
+    --dislike-color: #ff8585;
+
+    /* Other links */
+    --link-color: #c5a3ff;
+}
+
+/* Page background */
+html,
+body {
+    background: var(--page) !important;
+    color: var(--comment-color) !important;
+}
+
+/* Comment boxes and discussion panels */
+.post,
+.comment,
+[class*="comment"],
+[class*="reply"],
+[class*="discussion"] {
+    border-color: var(--border) !important;
+}
+
+/* Comment cards */
+.post,
+.comment,
+[class*="comment-card"],
+[class*="comment-item"] {
+    background-color: var(--card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px;
+    transition: background-color 160ms ease,
+                border-color 160ms ease;
+}
+
+/* Hover effect on comment cards */
+.post:hover,
+.comment:hover,
+[class*="comment-card"]:hover,
+[class*="comment-item"]:hover {
+    border-color: var(--border-hover) !important;
+    background-color: #301d21 !important;
+}
+
+/* Commenter names */
+a[href*="/user"],
+a[href*="/profile"],
+[class*="username"],
+[class*="user-name"],
+[class*="author"],
+[class*="display-name"] {
+    color: var(--name-color) !important;
+}
+
+/* Actual comment text */
+.comment p,
+.post p,
+[class*="comment-content"],
+[class*="comment-body"],
+[class*="comment-text"],
+[class*="content"] p {
+    color: var(--comment-color) !important;
+}
+
+/* Like controls */
+button[aria-label*="like" i]:not(
+    [aria-label*="dislike" i]
+),
+button[title*="like" i]:not(
+    [title*="dislike" i]
+),
+a[aria-label*="like" i],
+[class*="like"]:not([class*="dislike"]) {
+    color: var(--like-color) !important;
+}
+
+/* Dislike controls */
+button[aria-label*="dislike" i],
+button[title*="dislike" i],
+a[aria-label*="dislike" i],
+[class*="dislike"] {
+    color: var(--dislike-color) !important;
+}
+
+/* Timestamps and user roles */
+time,
+[class*="time"],
+[class*="date"],
+[class*="role"],
+[class*="badge"] {
+    color: var(--muted-color);
+}
+
+/* Reply controls */
+a[href*="reply"],
+button[aria-label*="reply" i],
+button[title*="reply" i],
+[class*="reply-button"],
+[class*="reply-link"] {
+    color: #f08b9b !important;
+}
+
+/* General links */
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    filter: brightness(1.2);
+}
+
+/* Reaction hover feedback */
+button:hover,
+[role="button"]:hover {
+    filter: brightness(1.15);
+}
+
+/* Text selection */
+::selection {
+    background: #873b48;
+    color: #ffffff;
+}
+
+/* =========================================
+   CRIMSON NIGHT — BACKGROUND HARMONY
+   ========================================= */
+
+:root {
+    --page: #1b1316;
+    --surface: #211619;
+    --card: #291a1d;
+    --border: #593037;
+    --border-hover: #88404b;
+}
+
+/* Main page background */
+html,
+body {
+    background-color: #1b1316 !important;
+}
+
+/* Main content area */
+main,
+[role="main"],
+.container,
+.content-wrapper,
+[class*="comment-section"] {
+    background-color: #211619 !important;
+}
+
+/* Areas surrounding the comment cards */
+.post,
+.comment,
+[class*="comment-card"],
+[class*="comment-item"] {
+    background-color: #291a1d !important;
+    border-color: #593037 !important;
+}
+
+/* Nested replies: slightly deeper burgundy */
+.comment .comment,
+.comment .comment-item,
+.comment .comment-card {
+    background-color: #24171c !important;
+    border-color: #503039 !important;
+}
+
+/* Subtle burgundy hover */
+.post:hover,
+.comment:hover,
+[class*="comment-card"]:hover,
+[class*="comment-item"]:hover {
+    background-color: #302025 !important;
+    border-color: #88404b !important;
+}
+
+/* Keep the overall page cohesive */
+section,
+article {
+    border-color: #39252b;
+}
+
+/* Preserve readable comment text */
+.comment p,
+.comment [class*="comment-text"],
+.comment [class*="comment-body"] {
+    color: #f0e6e2 !important;
+}
